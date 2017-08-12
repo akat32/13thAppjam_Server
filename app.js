@@ -9,7 +9,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
 require('./mongo');
 
-var auth = require('./route/reg.js');
+var auth = require('./route/auth.js');
 
 var loauth = require('./route/login.js');
 app.use('/reg', auth);

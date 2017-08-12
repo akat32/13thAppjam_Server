@@ -7,7 +7,7 @@ router.post('/', (req,res)=>{
   if(user){
     res.status(200).send(user);
     Users.update({name:req.body.name}, {$set:{"isLogined": true}}, function(err, result) {
-      if (err);
+      if(err);
       if(result) console.log(user);
     });
   }
