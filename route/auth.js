@@ -1,7 +1,6 @@
 var express = require('express');
 var router = express.Router();
 
-
 router.post('/', (req,res)=>{
   var new_user = req.body;
   Users.findOne({name: req.body.name, passwd: req.body.passwd}, (err, member)=>{

@@ -10,10 +10,11 @@ app.use(bodyParser.urlencoded({limit: '1gb', extended: false }));
 require('./mongo');
 
 var auth = require('./route/auth.js');
-
 var loauth = require('./route/login.js');
+var InputStr = require('./route/string.js');
 app.use('/reg', auth);
 app.use('/login', loauth);
+app.use('/string', InputStr);
 app.listen(3000, function(){
   console.log('Server porting on 3000');
 
